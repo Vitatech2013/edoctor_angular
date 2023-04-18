@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 m-auto">
+            <div class="card">
+                <div class="card-header ">
+                     <h2 class="text-center">Hospital-Profile</h2>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="HUpdateForm">
+                        <div class="row mb-4">
+                            <div class="col-sm-4">
+                                <label>Hospital name</label>
+                                <input type="text" class="form-control" readonly formControlName="hospitalname" placeholder="Enter Hospital name">
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Estd year</label>
+                                <input type="text" class="form-control" formControlName="estyear" placeholder="Enter Estd name">
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Email</label>
+                                <input type="email" class="form-control" formControlName="emailid" placeholder="Enter Emailid">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            
+                            <div class="col-sm-4">
+                                <label>Mobile</label>
+                                <input type="mobile" class="form-control" formControlName="phoneno" placeholder="Enter Mobile no">
+                            </div>
+                            <div class="col-sm-4">
+                                <label >District</label>
+                                <select  class="form-select form-control" formControlName="district" required>
+                                  <option value="">--select--</option>
+                                  <option value="Karimnagar">Karimnagar</option>
+                                  <option value="Peddapelly">Peddapelly</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label >State</label>
+                                <select class="form-select form-control" formControlName="state" required>
+                                  <option value="">--select--</option>
+                                  <option value="telangana">telangana</option>
+                                  <option value="andra">andra</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                           
+                            <div class="col-sm-4">
+                                <label >country</label>
+                                <select class="form-select form-control" formControlName="country" required>
+                                  <option value="">--select--</option>
+                                  <option value="india">india</option>
+                                  <option value="usa">usa</option>
+
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Address</label>
+                                <textarea type="mobile" class="form-control" placeholder="Enter Address" formControlName="address"></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary" (click)="EditProfile()">Update</button>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

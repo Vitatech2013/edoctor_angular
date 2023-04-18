@@ -1,0 +1,104 @@
+
+<div class="container mt-4">
+    <div class="row">
+    <div class="col-sm-4 m-auto">
+        <form [formGroup]="PsearchdrForm" (ngSubmit)="search()">
+            <div class="form-group">
+                <label>Doctor Name</label>
+                <select class="form-select form-control" formControlName="sd">
+                  <option value="General" >General</option>
+                  <option  value="Gynecologist">Gynecologist</option>
+                  <option  value="cardiologist">cardiologist</option>
+                  <option  value="Neurologist">Neurologist</option>
+                  <option  value="Pediatrician">Pediatrician</option>
+                  </select>  
+                </div>
+          <div class="text-center">  
+            <button type="submit" class="btn btn-success mt-2">search</button>
+     </div>
+     
+    </form> 
+</div>
+</div>
+</div>
+<br><br>
+    <div class="container">
+        <div class="table-responsive doctor">
+            <table class="table table-bordered table-hover">
+               <thead class="table-dark">
+                <tr>
+                  <th>s.no</th>
+                  <th>Doctor name</th>
+                  <th>Email id</th>
+                  <th>Date of Join</th>
+                  <th>Mobile no</th>
+                  <th>Specialization</th>
+                  <th>Shedule</th>
+                  <th>Timings</th>
+                  <th>Address</th>
+                  <th>Hospital name</th>
+                  <th>Action</th>
+        
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let d of kkl,index as i">
+                  <th>{{i+1}}</th>
+                  <td>{{d.dname}}</td>
+                  <td>{{d.demailid}}</td>
+                  <td>{{d.ddoj}}</td>
+                  <td>{{d.dphone}}</td>
+                  <td>{{d.dspecilization}}</td>
+                  <td>{{d.dschedule}}</td>
+                  <td>{{d.Timings}}</td>
+                  <td>{{d.daddress}}</td>
+                  <td>{{d.HospitalName}}</td>
+                  <td>
+                    <button type="button" (click)="geteditdata(d)" class="btn btn-primary btn-sm" data-bs-toggle="modal"data-bs-target=".bd-example-modal-lg">Add Appointment</button>
+              </tbody>
+            </table>
+          </div>
+    </div>
+
+
+
+    
+
+<div class="modal fade bd-example-modal-lg " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="m-auto">
+<form [formGroup]="AddAppointment" (ngSubmit)="BookAppointment()">
+  <div class="row mb-4">
+ <div class="col-sm-12">
+  <div class="mt-4">
+<label> Name</label>
+<input type="text" class="form-control" formControlName="name">
+  </div>
+  <div>
+    <label>Doctor name</label>
+<input type="text" readonly class="form-control" formControlName="dname">
+  </div>
+  <div>
+    <label>Hospital name</label>
+<input type="text" readonly class="form-control" formControlName="HospitalName">
+  </div>
+  <div>
+    <label>Date</label>
+    <input type="date" class="form-control" formControlName="date">
+  </div>
+  <div>
+    <label>Time</label>
+    <input type="time" class="form-control" formControlName="time">
+  </div>
+  <div class="text-center">
+    <button type="submit" class="btn btn-success mt-2" >Book</button>
+  </div>
+ </div>
+  </div>
+</form>
+    </div>
+  </div>
+</div>
+</div>

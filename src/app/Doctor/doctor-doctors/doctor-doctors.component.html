@@ -1,0 +1,35 @@
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+       <thead class="table-dark">
+        <tr>
+          <th>s.no</th>
+          <th>Doctor name</th>
+          <th>Email id</th>
+          <th>Date of Join</th>
+          <th>Mobile no</th>
+          <th>Specialization</th>
+          <th>Shedule</th>
+          <th>Timings</th>
+          <th>Address</th>
+          <th>Hospital name</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let d of doctors index as i">
+          <th>{{i+1}}</th>
+          <td>{{d.dname}}</td>
+          <td>{{d.demailid}}</td> 
+          <td>{{d.ddoj}}</td>  
+          <td>{{d.dphone}}</td> 
+          <td>{{d.dspecilization}}</td>  
+          <td>{{d.dschedule}}</td>
+          <td>{{d.Timings}}</td> 
+          <td>{{d.daddress}}</td>
+          <td>{{d.HospitalName}}</td>       
+
+     
+      </tbody>
+    </table>
+  </div>
+

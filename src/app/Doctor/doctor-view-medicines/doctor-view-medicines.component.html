@@ -1,0 +1,20 @@
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+       <thead class="table-dark">
+        <tr>
+          <th>s.no</th>
+          <th>Problem</th>
+          <th>Precautions</th>
+          <th>Medicines</th>
+       </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let m of medicines,index as i">
+          <th>{{i+1}}</th>
+          <td>{{m.Problem}}</td>
+          <td>{{m.Precautions}}</td>
+          <td>{{m.Medicienes}}</td>
+     
+      </tbody>
+    </table>
+  </div>

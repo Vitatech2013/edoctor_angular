@@ -1,0 +1,54 @@
+
+
+
+<nav class="navbar navbar-dark navbar-expand-sm bg-success">
+    <div class="container">
+    <a  class="navbar-brand">
+    <i class="bi bi-hospital"></i> &nbsp;
+    E DOCTOR
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a  class="nav-link active">
+                Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="patient-profile"  class="nav-link active">
+                Profile
+            </a>
+        </li>
+        <li class="nav-item">
+            <a  routerLink="Psearch-doctors"  class="nav-link active">
+                Search doctor
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="Pview-appointments" class="nav-link active">
+                View appointments
+            </a>
+        </li>
+        <li class="nav-item">
+            <a  routerLink="Pchangepassword" class="nav-link active">
+                changepassword
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/welcome/patient-login" (click)="logout" class="nav-link active">
+                Logout
+            </a>
+        </li>
+
+    </ul>
+    </div></div></nav>
+
+    
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+
+

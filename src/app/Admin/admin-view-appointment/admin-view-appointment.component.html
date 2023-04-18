@@ -1,0 +1,75 @@
+<div class="table-responsive padding">
+    <table class="table table-bordered table-hover">
+       <thead class="table-dark">
+        <tr>
+          <th>s.no</th>
+          <th>Doctor name</th>
+          <th>Hospital name</th>
+          <th>Patient name</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Action</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let a of appointments,index as i">
+          <th>{{i+1}}</th>
+          <td>{{a.dname}}</td>
+          <td>{{a.HospitalName}}</td>
+          <td>{{a.name}}</td>
+          <td>{{a.date}}</td>
+          <td>{{a.time}}</td>
+          <td>
+          <button type="button" class="btn"  data-bs-toggle="modal"data-bs-target=".bd-example-modal-lg" (click)="geteditdata(a)"><i class="bi bi-pencil-square"></i> </button>
+          <button type="button" (click)="DeleteAppointments(a)" class="btn"><i class="bi bi-trash"></i> </button>
+        </td>
+     
+      </tbody>
+    </table>
+  </div>
+
+
+
+    
+
+  <div class="modal fade bd-example-modal-lg " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="m-auto">
+  <form [formGroup]="Appointment" (ngSubmit)="EditAppointment()">
+    <div class="row mb-4">
+   <div class="col-sm-12">
+    <div class="mt-4">
+  <label> Name</label>
+  <input type="text" class="form-control" formControlName="name">
+    </div>
+    <div>
+      <label>Doctor name</label>
+  <input type="text" class="form-control" formControlName="dname">
+    </div>
+    <div>
+      <label>Hospital name</label>
+  <input type="text" class="form-control" formControlName="HospitalName">
+    </div>
+   
+    <div>
+      <label>Date</label>
+      <input type="date" class="form-control" formControlName="date">
+    </div>
+    <div>
+      <label>Time</label>
+      <input type="time" class="form-control" formControlName="time">
+    </div>
+    <div class="text-center">
+      <button  class="btn btn-success mt-2" type="submit" >Edit</button>
+    </div>
+   </div>
+    </div>
+  </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  

@@ -1,0 +1,30 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5 m-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form [formGroup]="MedicineForm" (ngSubmit)="addmedicine()" >
+                        <div class="form-group mb-4">
+                          <label >Problem</label>
+                          <input type="email" class="form-control" formControlName="Problem" >
+                            </div>
+                        <div class="form-group mb-4" >
+                          <label>Precautions</label>
+                          <input type="text" class="form-control" formControlName="Precautions" >
+                        </div>
+                        <div class="form-group mb-2" >
+                            <label>Medicines</label>
+                            <input type="text" class="form-control" formControlName="Medicienes">
+                          </div>
+                        <div class="text-center mb-4">
+                        <button type="submit" class="btn btn-primary mt-2 " >Add</button>
+                    </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

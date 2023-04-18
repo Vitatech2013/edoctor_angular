@@ -1,0 +1,74 @@
+
+
+
+<nav class="navbar navbar-dark navbar-expand-sm bg-success">
+    <div class="container">
+    <a  class="navbar-brand">
+    <i class="bi bi-hospital"></i> &nbsp;
+    E DOCTOR
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a  class="nav-link active">
+                Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="doctor-profile"  class="nav-link active">
+                Profile
+            </a>
+        </li>
+        <li class="nav-item">
+            <a  routerLink="Dview-doctors"  class="nav-link active">
+                View Doctor
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="Dview-appointments" class="nav-link active">
+                View appointments
+            </a>
+        </li>
+        <li class="nav-item">
+            <a  routerLink="Dadd-medicine" class="nav-link active">
+                Add medicine
+            </a>
+        </li>
+        <li class="nav-item">
+            <a  routerLink="Dview-medicine" class="nav-link active">
+                View medicine
+            </a>
+        </li>
+        <li class="nav-item">
+            <a  routerLink="Dadd-homeremedies" class="nav-link active">
+                Add HomeRemedies
+            </a>
+        </li>
+        <li class="nav-item">
+            <a  routerLink="Dview-homeremedies" class="nav-link active">
+                View HomeRemedies
+            </a>
+        </li>
+        <li class="nav-item">
+            <a  routerLink="Dchangepassword" class="nav-link active">
+                Changepassword
+            </a>
+        </li>
+        <li class="nav-item">
+            <a  class="nav-link active" (click)="logout()" routerLink="/welcome/doctor-login">
+                Logout
+            </a>
+        </li>
+
+    </ul>
+    </div></div></nav>
+
+    
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+
+

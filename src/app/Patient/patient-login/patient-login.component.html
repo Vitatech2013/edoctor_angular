@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5 m-auto">
+            <div class="card">
+                <div class="card-header ">
+                     <h2 class="text-center">Patient-login</h2>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="PLoginForm" (ngSubmit)="patientLogin()">
+                        <div class="form-group mb-4">
+                          <label >Username</label>
+                          <input type="email" class="form-control" formControlName="name" placeholder="Enter username"  required>
+                            </div>
+                        <div class="form-group mb-2">
+                          <label>Password</label>
+                          <input type="password" class="form-control" formControlName="password"  placeholder="Enter Password" required>
+                        </div>
+                        <div class="text-center mb-4">
+                        <button type="submit" class="btn btn-primary mt-2 btn-sm">Login</button>
+                    </div>
+                      </form>
+                      New User ??
+                      <button  class="btn btn-link" routerLink="/welcome/patient-register">Register here</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

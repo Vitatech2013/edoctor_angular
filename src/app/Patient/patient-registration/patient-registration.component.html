@@ -1,0 +1,70 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-sm-12 m-auto">
+            <div class="card">
+                <div class="card-header ">
+                     <h2 class="text-center">Patient-Registration</h2>
+                </div>
+                <div class="card-body p-4">
+                    <form [formGroup]="PRegisterForm">
+                        <div class="row mb-4">
+                            <div class="col-sm-4">
+                                <label>Patient name</label>
+                                <input type="text" class="form-control" formControlName="name" placeholder="Enter Doctor name">
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Father name</label>
+                                <input type="text" class="form-control" formControlName="fathername" placeholder="Enter Father name">
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Email</label>
+                                <input type="email" class="form-control" formControlName="emailid" placeholder="Enter Emailid">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-sm-4">
+                                <label>Password</label>
+                                <input type="password" class="form-control" formControlName="password" placeholder="Enter Password">
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Date of birth</label>
+                                <input type="date" class="form-control" formControlName="dob" placeholder="Choose date">
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Mobile</label>
+                                <input type="mobile" class="form-control" formControlName="phone" placeholder="Enter Mobile no">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-sm-4">
+                                <label>Gender:</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="Male" formControlName="gender">
+                                    <label class="form-check-label">Male</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" value="Female" formControlName="gender">
+                                    <label class="form-check-label"  >Female</label>
+                                  </div>
+                            </div>
+                        
+                            <div class="col-sm-4">
+                                <label>Address</label>
+                                <textarea rows="2" type="mobile" class="form-control" formControlName="address" placeholder="Enter Address"></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary" (click)="AddPatient()"> Register</button>
+                        </div>
+                      </form>
+                      <div class="text-center">
+                      Already have an account ??
+                      <button class="btn btn-link" routerLink="/welcome/patient-login">Login here</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

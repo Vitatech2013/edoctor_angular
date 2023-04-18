@@ -1,0 +1,87 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-sm-12 m-auto">
+            <div class="card">
+                <div class="card-header ">
+                     <h2 class="text-center">Doctor-Profile</h2>
+                </div>
+                <div class="card-body p-4">
+                    <form [formGroup]="DUpdateForm">
+                        <div class="row mb-4">
+                            <div class="col-sm-4">
+                                <label>Doctor name</label>
+                                <input type="text" class="form-control" readonly formControlName="dname" placeholder="Enter Doctor name">
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Father name</label>
+                                <input type="text" class="form-control" formControlName="dfathername" placeholder="Enter Father name">
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Email</label>
+                                <input type="email" class="form-control" formControlName="demailid" placeholder="Enter Emailid">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-sm-4">
+                                <label>Mobile</label>
+                                <input type="mobile" class="form-control" placeholder="Enter Mobile no" formControlName="dphone">
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Date of join</label>
+                                <input type="date" class="form-control" formControlName="ddoj" placeholder="Enter Emailid">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="inputState">Specialization</label>
+                                 <select class="form-select form-control" formControlName="dspecilization">
+                                  <option >General</option>
+                                  <option>Gynecologist</option>
+                                  <option>cardiologist</option>
+                                  <option>Neurologist</option>
+                                  <option>Pediatrician</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                           
+                        
+                            <div class="col-sm-4">
+                                <label >Shedule</label>
+                                <select  class="form-select form-control" formControlName="dschedule">
+                                  <option >mon,tue,wends</option>
+                                  <option>thurs,fri,sat</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="inputState">Timings</label>
+                                <select id="inputState" class="form-control" formControlName="Timings">
+                                    <option >10-1</option>
+                                    <option>10-5</option>
+                                    <option>1-5</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label >Hospital name</label>
+                                <select  class="form-select form-control" formControlName="HospitalName" >
+                                    <option *ngFor="let h of hospitals" value="{{h.hospitalname}}">{{h.hospitalname}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                           
+                            <div class="col-sm-5 m-auto">
+                                <label>Address</label>
+                                <textarea type="mobile" class="form-control" placeholder="Enter Address" formControlName="daddress"></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" (click)="EditProfile()" class="btn btn-primary btn-sm">Update</button>
+                        </div>
+                      </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

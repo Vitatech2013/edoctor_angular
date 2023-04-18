@@ -1,0 +1,57 @@
+
+
+
+<nav class="navbar navbar-dark navbar-expand-sm bg-success">
+    <div class="container">
+    <a href="/" class="navbar-brand">
+    <i class="bi bi-hospital"></i> &nbsp;
+    E DOCTOR
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a href="" class="nav-link active">
+                Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="admin-login"  class="nav-link active">
+                AdminLogin
+            </a>
+        </li>
+        <li class="nav-item">
+            <a  routerLink="doctor-login"  class="nav-link active">
+                DoctorLogin
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="patient-login" class="nav-link active">
+                PatientLogin
+            </a>
+        </li>
+        <li class="nav-item">
+            <a  routerLink="hospital-login" class="nav-link active">
+                HospitalLogin
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="search-medicines" class="nav-link active">
+                SearchMedicine
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="search-remedies" class="nav-link active">
+                SearchRemedie
+            </a>
+      </li>
+    </ul>
+    </div></div></nav>
+
+    
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+
